@@ -126,6 +126,11 @@ footer {
   }
 }
 
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease; 
+  opacity: 0;
+}
+
 /* sidebar */
 
 aside {
@@ -156,42 +161,6 @@ aside {
 
 /* forms */
 
-.form-login {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-
-.form-login .checkbox {
-  margin-bottom: 10px;
-  text-align: left;
-  font-weight: normal;
-}
-
-.form-login .form-control {
-  position: relative;
-  height: auto;
-  @include box_sizing;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.form-login .form-control:focus {
-  z-index: 2;
-}
-
-.form-login input[type="text"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-login input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -216,4 +185,22 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.left {
+  text-align: left !important;
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
