@@ -12,3 +12,31 @@ felix:
   name: felix
   email: felix@testing.com
   password_digest: <%= User.digest('111111') %>
+  
+tuser:
+  name: Test User2
+  email: user2@testing.com
+  password_digest: <%= User.digest('anything') %>
+  admin: true
+  
+archer:
+  name: Sterling Archer
+  email: duchess@testing.gov
+  password_digest: <%= User.digest('password') %>
+  
+lana:
+  name: Lana Kane
+  email: hands@testing.gov
+  password_digest: <%= User.digest('password') %>
+  
+mallory:
+  name: Mallory Archer
+  email: boss@testing.gov
+  password_digest: <%= User.digest('password') %>
+  
+<% 15.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@testing.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>

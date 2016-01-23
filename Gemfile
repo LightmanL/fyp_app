@@ -7,6 +7,12 @@ gem 'rails', '4.2.4'
 gem 'bootstrap-sass', '~>3.2.0.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Use faker to generate sample users with semi-realistic name and email address!
+gem 'faker', '1.4.2'
+# Use paginate to paginate the users' page
+gem 'will_paginate', '~> 3.0.7'
+# Use bootstrap to modify paginate
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
