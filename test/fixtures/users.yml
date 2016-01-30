@@ -12,31 +12,43 @@ felix:
   name: felix
   email: felix@testing.com
   password_digest: <%= User.digest('111111') %>
+  activated:    true
+  activated_at: <%= Time.zone.now %>
   
 tuser:
   name: Test User2
   email: user2@testing.com
   password_digest: <%= User.digest('anything') %>
   admin: true
+  activated:    true
+  activated_at: <%= Time.zone.now %>
   
 archer:
   name: Sterling Archer
   email: duchess@testing.gov
   password_digest: <%= User.digest('password') %>
+  activated:    true
+  activated_at: <%= Time.zone.now %>
   
 lana:
   name: Lana Kane
   email: hands@testing.gov
   password_digest: <%= User.digest('password') %>
+  activated:    true
+  activated_at: <%= Time.zone.now %>
   
 mallory:
   name: Mallory Archer
   email: boss@testing.gov
   password_digest: <%= User.digest('password') %>
+  activated:    true
+  activated_at: <%= Time.zone.now %>
   
 <% 15.times do |n| %>
 user_<%= n %>:
   name: <%= "User #{n}" %>
   email: <%= "user-#{n}@testing.com" %>
   password_digest: <%= User.digest('password') %>
+  activated:    true
+  activated_at: <%= Time.zone.now %>
 <% end %>
